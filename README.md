@@ -40,9 +40,9 @@ If it's prossibe, one feature at a time ;-).
 
 # Maintainers
 
-| Component | Contact person | Github label | Link |
+| Component | Contact person | Link |
 |-----------|----------------|--------|---|
-| Project | @binaryfigments | [comp:base] (https://github.com/binaryfigments/dnsseccheck/labels/core) | https://binaryfigments.com |
+| Project | @binaryfigments | https://binaryfigments.com |
 
 # The MIT License (MIT)
 
