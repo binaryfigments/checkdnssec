@@ -41,7 +41,7 @@ If it's prossibe, one feature at a time ;-).
 # Maintainers
 
 | Component | Contact person | Link |
-|-----------|----------------|--------|---|
+|-----------|----------------|------|
 | Project | @binaryfigments | https://binaryfigments.com |
 
 # The MIT License (MIT)
