@@ -1,15 +1,12 @@
 # Go / Golang DNS and DNSSEC Check
 
-API DNS and DNSSEC information from DNS for use as module.
+[![baby-gopher](https://raw.githubusercontent.com/drnic/babygopher-site/gh-pages/images/babygopher-badge.png)](http://www.babygopher.org)
 
-For example:
-```
-$ ./checkdns -host=localhost -port=4004
-```
+Get DNSSEC information from DNS.
 
 # Dependencies
 
- * Go 1.7.x tested https://golang.org
+ * Go 1.x tested https://golang.org
  * govalidator https://github.com/miekg/dns
  * publixsuffix https://golang.org/x/net/publicsuffix
  * idns https://golang.org/x/net/idna
@@ -31,12 +28,6 @@ go get -u golang.org/x/net/publicsuffix
 - [ ] Structuring
 - [ ] More information
 
-# Download, build and run
-[![asciicast](https://asciinema.org/a/94021.png)](https://asciinema.org/a/94021)
-
-# Test with curl
-[![asciicast](https://asciinema.org/a/94022.png)](https://asciinema.org/a/94022)
-
 # Contributing
 
 1. Fork this project
@@ -51,7 +42,7 @@ If it's prossibe, one feature at a time ;-).
 
 | Component | Contact person | Github label | Link |
 |-----------|----------------|--------|---|
-| Project | @binaryfigments | [comp:base] (https://github.com/binaryfigments/dnscheck/labels/core) | https://binaryfigments.com |
+| Project | @binaryfigments | [comp:base] (https://github.com/binaryfigments/dnsseccheck/labels/core) | https://binaryfigments.com |
 
 # The MIT License (MIT)
 
