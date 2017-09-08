@@ -28,6 +28,10 @@ go get -u golang.org/x/net/publicsuffix
 - [ ] Structuring
 - [ ] More information
 
+## Screenshots
+
+![checkdnssec](https://github.com/binaryfigments/checkdnssec/raw/master/screenshots/checkdnssec.png "shot3")
+
 # Contributing
 
 1. Fork this project
