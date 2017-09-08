@@ -118,14 +118,12 @@ func Run(domain string, startnameserver string) (*checkdnssec.Message, error) {
 	if msg.Answer.DSRecordCount > 0 && msg.Answer.DNSKEYRecordCount > 0 {
 		filtered := []*checkdnssec.DomainDS{}
 		dnskeys := []*checkdnssec.DomainDNSKEY{}
-		keydex := 0
 		for _, e := range msg.Answer.DSRecords {
-			for _, f := range msg.Answer.CalculatedDS {
+			for i, f := range msg.Answer.CalculatedDS {
 				if f.Digest == e.Digest {
 					filtered = append(filtered, f)
-					dnskeys = append(dnskeys, msg.Answer.DNSKEYRecords[keydex])
+					dnskeys = append(dnskeys, msg.Answer.DNSKEYRecords[i])
 				}
-				keydex++
 			}
 		}
 		msg.Answer.Matching.DS = filtered
