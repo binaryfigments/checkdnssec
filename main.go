@@ -8,6 +8,7 @@ import (
 	"os"
 
 	"github.com/binaryfigments/checkdnssec/checks"
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -35,7 +36,35 @@ func main() {
 		}
 		fmt.Printf("%s\n", json)
 	case "text":
-		fmt.Println("Not done yet...")
+		fmt.Println("")
+		color.Cyan("[ DNSSEC Check for: %s ]", check.Question.JobDomain)
+		fmt.Printf("Domain........: %v\n", check.Question.JobDomain)
+		fmt.Printf("Time..........: %v\n", check.Question.JobTime)
+		fmt.Printf("Status........: %v\n", check.Question.JobStatus)
+		fmt.Printf("Message.......: %v\n", check.Question.JobMessage)
+		fmt.Println("")
+
+		if len(check.Answer.Matching.DS) == 0 {
+			color.Red("[ No DNSSEC configuration found. ]")
+			os.Exit(0)
+		}
+
+		for _, mds := range check.Answer.Matching.DS {
+			color.Cyan("[ Type: DS ]")
+			fmt.Printf("KeyTag........: %v\n", mds.KeyTag)
+			fmt.Printf("Algorithm.....: %v\n", mds.Algorithm)
+			fmt.Printf("DigestType....: %v\n", mds.DigestType)
+			fmt.Printf("Digest........: %v\n", mds.Digest)
+			fmt.Println("")
+		}
+		for _, mdnskey := range check.Answer.Matching.DNSKEY {
+			color.Cyan("[ Type: DNSKEY ]")
+			fmt.Printf("Algorithm.....: %v\n", mdnskey.Algorithm)
+			fmt.Printf("Flags.........: %v\n", mdnskey.Flags)
+			fmt.Printf("Protocol......: %v\n", mdnskey.Protocol)
+			fmt.Printf("PublicKey.....: %v\n", mdnskey.PublicKey)
+			fmt.Println("")
+		}
 	default:
 		err := errors.New("output format is not json or txt")
 		fmt.Println(err)

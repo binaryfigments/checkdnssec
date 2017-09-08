@@ -19,7 +19,7 @@ go get -u golang.org/x/net/publicsuffix
 
 # TODO
 
-- [ ] TOP DOWN DNS CHECK!
+- [ ] Top down DNS check
 - [ ] Error checking and reporting
 - [ ] Saving data for later use
 - [ ] normal **formatting**
