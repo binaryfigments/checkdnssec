@@ -30,7 +30,7 @@ go get -u golang.org/x/net/publicsuffix
 
 ## Screenshots
 
-![checkdnssec](https://github.com/binaryfigments/checkdnssec/raw/master/screenshots/checkdnssec.png "checkdnssec")
+![checkdnssec](https://github.com/binaryfigments/checkdnssec/blob/master/screenshot/checkdnssec.png "checkdnssec")
 
 # Contributing
 
